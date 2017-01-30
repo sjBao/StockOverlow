@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+
+
+  get '/portfolios/new' => 'portfolios#new'
+  post '/portfolios' => 'portfolios#create'
+  get 'portfolios/:id/positions/:id' => 'positions#show'
 end
