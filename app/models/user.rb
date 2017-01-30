@@ -5,5 +5,5 @@ class User < ApplicationRecord
   has_secure_password
 
   has_one :portfolio
-  has_many :positions, through: :portfolio
+  # has_many :positions, through: :portfolio
 end
