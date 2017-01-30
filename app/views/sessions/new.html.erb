@@ -1,15 +1,18 @@
-<section class="form-container">
-  <h2>Login</h2>
-  <%= form_for(:session, url: login_path) do |f| %>
-    <%= render "shared/error_messages" %>
-    <div class="form-group">
-      <%= f.label :email %>
-      <%= f.email_field :email, :class => "form-control"%>
-    </div>
-    <div class="form-group">
-      <%= f.label :password %>
-      <%= f.password_field :password, :class => "form-control"%>
-    </div>
-    <%= f.submit "Login", :class => "btn btn-default" %>
-  <% end %>
+<section>
+
+  <div class="form-container">
+    <h2 class="form_header">Login</h2>
+    <%= form_for(:session, url: login_path) do |f| %>
+      <%= render "shared/error_messages" %>
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, :class => "form-control"%>
+      </div>
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, :class => "form-control"%>
+      </div>
+      <%= f.submit "Login", :class => "btn btn-default" %>
+    <% end %>
+  </div>
 </section>
