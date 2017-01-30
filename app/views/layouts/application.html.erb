@@ -19,7 +19,7 @@
           <li class="nav_item">Logout</li>
         <% else %>
           <li class="nav_item">Create Account</li>
-          <li class="nav_item">Login</li>
+          <li> <%= link_to('login', login_path)%> </li>
         <% end %>
       </ul>
     </nav>
