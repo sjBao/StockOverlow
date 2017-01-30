@@ -1,6 +1,8 @@
+# pending "add some examples to (or delete) #{__FILE__}"
+
 require 'rails_helper'
 
-Rspec.describe Position, :type => :model do
+RSpec.describe Position, :type => :model do
   describe 'it belongs to a user' do
     it '#user returns user who bought this stock'
   end

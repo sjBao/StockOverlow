@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-Rspec.describe User, :type => :model do
+RSpec.describe User, :type => :model do
   describe 'it has has names' do
     it '#firstname returns user first name'
 

@@ -1,6 +1,8 @@
+# pending "add some examples to (or delete) #{__FILE__}"
+
 require 'rails_helper'
 
-Rspec.describe Portfolio, :type => :model do
+RSpec.describe Portfolio, :type => :model do
   describe '#user should return matching user' do
     it 'returns instance of User'
 
