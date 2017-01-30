@@ -9,6 +9,20 @@
   </head>
 
   <body>
+    <header>
+      <h1 id="logo">StockOverflow</h1>
+    </header>
+    <nav>
+      <ul id="main-nav">
+        <% if logged_in? %>
+          <li class="nav_item">Your Portfolio</li>
+          <li class="nav_item">Logout</li>
+        <% else %>
+          <li class="nav_item">Create Account</li>
+          <li class="nav_item">Login</li>
+        <% end %>
+      </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>
