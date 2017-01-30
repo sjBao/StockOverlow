@@ -1,2 +1,11 @@
-// @import "bootstrap-sprockets";
-// @import "bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1em;
+}
+
+#logo {
+  font-variant: small-caps;
+}
