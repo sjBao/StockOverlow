@@ -12,6 +12,7 @@ class PortfoliosController < ApplicationController
     if @portfolio.save
       redirect_to '/'
     else
+      @errors = ['You must be logged in to create a portfolio.']
       render 'new'
     end
   end
