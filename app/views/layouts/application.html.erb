@@ -9,6 +9,20 @@
   </head>
 
   <body>
+    <header>
+      <h1 id="logo">StockOverflow</h1>
+    </header>
+    <nav>
+      <ul id="main-nav">
+        <% if logged_in? %>
+          <li class="nav_item">Your Portfolio</li>
+          <li class="nav_item">Logout</li>
+        <% else %>
+          <li> <%= link_to('create account', new_user_path)%> </li>
+          <li> <%= link_to('login', login_path)%> </li>
+        <% end %>
+      </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>
