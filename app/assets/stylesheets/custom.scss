@@ -6,6 +6,36 @@ body {
   font-size: 1em;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
 #logo {
   font-variant: small-caps;
+  font-size: 4em;
+  color: #85bb65;
+  margin-left: 15px;
+}
+
+.main-header {
+  height: 100px;
+}
+
+.nav-bar {
+  margin-top: 10px;
+  padding: 0;
+  font-size: 1.7em;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+.nav-bar li{
+  padding: 12px 17px;
+  display: inline;
+  margin: 10px;
+  background-color: #85bb65;
+}
+
+.nav-bar a{
+  color: white;
 }
