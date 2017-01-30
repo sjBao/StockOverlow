@@ -10,4 +10,5 @@ class PositionsController < ApplicationController
     @five_positions = yahoo_client.symbols_by_market('us', 'nyse').sample(5)
     @five_positions_data = yahoo_client.quotes(@five_positions, [:high, :low, :ask, :bid, :name, :symbol, :ebitda])
   end
+
 end

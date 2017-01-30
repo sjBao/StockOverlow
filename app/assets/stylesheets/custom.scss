@@ -1,0 +1,55 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1em;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+#logo {
+  font-variant: small-caps;
+  font-size: 4em;
+  color: #85bb65;
+  margin-left: 15px;
+}
+
+.main-header {
+  height: 100px;
+}
+
+.nav-bar {
+  margin-top: 10px;
+  padding: 0;
+  font-size: 1.7em;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+.nav-bar li{
+  padding: 12px 17px;
+  display: inline;
+  margin: 10px;
+  background-color: #85bb65;
+}
+
+.nav-bar a{
+  color: white;
+}
+
+.form_header {
+  border-bottom: 1px solid white;
+}
+
+.form-container {
+  font-variant: small-caps;
+  font-size: 1.7em;
+  color: white;
+  margin: 25px;
+  padding: 20px;
+  width: 300px;
+  background-color: #85bb65;
+}
