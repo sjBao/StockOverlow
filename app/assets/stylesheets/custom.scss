@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+a:hover{
+  text-decoration: none;
+}
+
 label {
   font-variant: small-caps;
 }
@@ -18,8 +22,11 @@ label {
 #logo {
   font-variant: small-caps;
   font-size: 4em;
-  color: #85bb65;
   margin: 15px;
+}
+
+#logo a{
+  color: #85bb65;
 }
 
 .main-header {
@@ -43,6 +50,7 @@ label {
 
 .nav-bar a{
   color: white;
+  background-color: #85bb65;
 }
 
 .form_header {
@@ -64,4 +72,18 @@ label {
   font-variant: small-caps;
   color: #85bb65;
   font-size: 1em;
+}
+
+.stock_table {
+  font-size: 1.3em;
+}
+
+.stock_title {
+  background-color: #e8e8e8;
+}
+
+.stock_entry {
+  // border-top: 1px solid black;
+  text-align: center;
+  padding: 15px 10px;
 }
