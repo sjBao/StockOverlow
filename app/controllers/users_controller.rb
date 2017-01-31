@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(users_params)
     if @user.save
       log_in(@user)
-      redirect_to '/'
+      redirect_to @user
     else
       @errors = @user.errors.full_messages
       render :new
