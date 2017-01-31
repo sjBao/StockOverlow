@@ -72,8 +72,15 @@ label {
   font-size: 1em;
 }
 
+.table-container {
+  margin: 25px;
+  padding: 0;
+  overflow-x: auto;
+}
+
 .stock_table {
   font-size: 1.2em;
+
 }
 
 .stock_title {
