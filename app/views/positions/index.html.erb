@@ -1,6 +1,4 @@
 <%= react_component 'App' %>
-<% @five_positions_data.each do |position| %>
-
 <div class="row">
   <div class="col-sm-12 col-md-12 table-container">
 
@@ -14,6 +12,7 @@
         <th class="stock_title stock_entry">Asking Price:</th>
         <th class="stock_title stock_entry">Bidding Price:</th>
       </tr>
+
     <% @five_positions_data.each do |position| %>
       <tr>
         <th class="stock_entry"><%= position.name %></th>
@@ -28,5 +27,3 @@
     </table>
   </div>
 </div>
-
-<% end %>

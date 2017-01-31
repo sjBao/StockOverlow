@@ -23,7 +23,7 @@
           <nav>
             <ul class="nav-bar">
               <% if logged_in? %>
-                <li> Your Portfolio </li>
+                <li> <%= link_to("#{current_user.first_name} #{current_user.last_name}'s Portfolio", user_path(current_user))%> </li>
                 <li> <%= link_to('Logout', logout_path)%> </li>
 
               <% else %>
