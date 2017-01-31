@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     if @user.save
       @user.portfolio = Portfolio.create
       log_in(@user)
-      redirect_to '/'
+      redirect_to @user
     else
       @errors = @user.errors.full_messages
       render :new
