@@ -59,12 +59,10 @@ label {
 }
 
 .form-container {
-  font-variant: small-caps;
   font-size: 1.7em;
   color: white;
   margin: 25px;
-  padding: 20px;
-  width: 400px;
+  padding: 50px;
   background-color: #85bb65;
 }
 
@@ -74,9 +72,14 @@ label {
   font-size: 1em;
 }
 
+.table-container {
+  margin: 25px;
+  padding: 0;
+  overflow-x: auto;
+}
+
 .stock_table {
   font-size: 1.2em;
-}
 
 .stock_title {
   background-color: #e8e8e8;

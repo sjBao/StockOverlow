@@ -12,6 +12,13 @@ class PositionsController < ApplicationController
     render json: @position
   end
 
+  def show
+    yahoo_client = YahooFinance::Client.new
+    # could try to find_by ticker instead of id
+    @position = Portfolio.positions.find(params[:id])
+    render json: @position
+  end
+
   def index
     yahoo_client = YahooFinance::Client.new
     @five_positions = yahoo_client.symbols_by_market('us', 'nyse').sample(5)
