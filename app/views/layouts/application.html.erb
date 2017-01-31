@@ -11,19 +11,19 @@
   </head>
 
   <body>
-    <div class="container-fluid">
+    <div class="container">
       <div class="row main-header">
-        <div class="col-sm-3 col-md-3 col-lg-3"
+        <div class="col-sm-6 col-md-6"
           <header>
-            <h1 id="logo">StockOverflow</h1>
+            <h1 id="logo"><%= link_to('StockOverflow', root_path)%></h1>
           </header>
         </div>
-        <div class="col-sm-9 col-md-9 col-lg-9">
+        <div class="col-sm-6 col-md-6">
           <nav>
             <ul class="nav-bar">
               <% if logged_in? %>
-                <li class="nav_item">Your Portfolio</li>
-                <li class="nav_item">Logout</li>
+                <li class="nav_item">Your Portfolio</li
+                <li class="nav_item"> <%= link_to('Logout', logout_path)%> </li>
               <% else %>
                 <li> <%= link_to('create account', new_user_path)%> </li>
                 <li> <%= link_to('login', login_path)%> </li>
@@ -31,7 +31,8 @@
             </ul>
           </nav>
         </div>
-    </div>
+      </div>
       <%= yield %>
+    </div>
   </body>
 </html>

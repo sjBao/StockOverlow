@@ -10,11 +10,23 @@ a {
   color: black;
   text-decoration: none;
 }
+
+a:hover{
+  text-decoration: none;
+}
+
+label {
+  font-variant: small-caps;
+}
+
 #logo {
   font-variant: small-caps;
   font-size: 4em;
+  margin: 15px;
+}
+
+#logo a{
   color: #85bb65;
-  margin-left: 15px;
 }
 
 .main-header {
@@ -32,15 +44,17 @@ a {
 .nav-bar li{
   padding: 12px 17px;
   display: inline;
-  margin: 10px;
+  // margin: 10px;
   background-color: #85bb65;
 }
 
 .nav-bar a{
   color: white;
+  background-color: #85bb65;
 }
 
 .form_header {
+  font-variant: small-caps;
   border-bottom: 1px solid white;
 }
 
@@ -50,6 +64,27 @@ a {
   color: white;
   margin: 25px;
   padding: 20px;
-  width: 300px;
+  width: 400px;
   background-color: #85bb65;
+}
+
+.submit_button {
+  font-variant: small-caps;
+  color: #85bb65;
+  font-size: 1em;
+}
+
+.stock_table {
+  font-size: 1.2em;
+}
+
+.stock_title {
+  background-color: #e8e8e8;
+  border-bottom: 1px solid black;
+}
+
+.stock_entry {
+  // border-top: 1px solid black;
+  text-align: center;
+  padding: 15px 10px;
 }

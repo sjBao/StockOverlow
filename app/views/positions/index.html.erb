@@ -1,11 +1,26 @@
-<% @five_positions_data.each do |position| %>
-  <h3><%= position.name %></h3>
-  <h4><%= position.symbol %></h4>
-  <h4><%= position.name %>'s EBITDA: <%= position.ebitda %></h4>
-  <ul>
-    <li>Today's High: <%= position.high %></li>
-    <li>Today's Low: <%= position.low %></li>
-    <li>Asking Price: <%= position.ask %></li>
-    <li>Bidding Price: <%= position.bid %></li>
-  </ul>
-<% end %>
+<div class="row">
+  <div class="col-sm-12 col-md-12">
+    <table class="stock_table"
+      <tr class="stock_header">
+        <th class="stock_title stock_entry">Company:</th>
+        <th class="stock_title stock_entry">Symbol:</th>
+        <th class="stock_title stock_entry">EBITDA:</th>
+        <th class="stock_title stock_entry">Today's High:</th>
+        <th class="stock_title stock_entry">Today's Low:</th>
+        <th class="stock_title stock_entry">Asking Price:</th>
+        <th class="stock_title stock_entry">Bidding Price:</th>
+      </tr>
+    <% @five_positions_data.each do |position| %>
+      <tr>
+        <th class="stock_entry"><%= position.name %></th>
+        <th class="stock_entry"><%= position.symbol %></th>
+        <th class="stock_entry"><%= position.ebitda %></th>
+        <th class="stock_entry"><%= position.high %></th>
+        <th class="stock_entry"><%= position.low %></th>
+        <th class="stock_entry"><%= position.ask %></th>
+        <th class="stock_entry"><%= position.bid %></th>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+</div>
