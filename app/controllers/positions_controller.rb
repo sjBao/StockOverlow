@@ -1,4 +1,16 @@
 class PositionsController < ApplicationController
+  def show
+    yahoo_client = YahooFinance::Client.new
+    # could try to find_by ticker instead of id
+    @position = Portfolio.positions.find(params[:id])
+  end
+
+  def show
+    yahoo_client = YahooFinance::Client.new
+    # could try to find_by ticker instead of id
+    @position = Portfolio.positions.find(params[:id])
+    render json: @position
+  end
 
   def show
     yahoo_client = YahooFinance::Client.new
