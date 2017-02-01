@@ -5,8 +5,6 @@ class StockTable extends React.Component {
 
   render(){
     return(
-      <div className="col-sm-12 col-md-12 table-container">
-
         <table className="stock_table">
           <tbody>
             <tr className="stock_header">
@@ -25,7 +23,6 @@ class StockTable extends React.Component {
             }
           </tbody>
         </table>
-      </div>
     )
   }
 }

@@ -11,7 +11,7 @@ class Position extends React.Component {
      .done(response =>{
        let currentValue = response.query.results.quote.Ask
        this.setState({currentValue: currentValue})
-       this.props.update(currentValue * this.props.data.shares)
+       this.props.update((currentValue * this.props.data.shares).toFixed(2))
      }.bind(this))
   }
 
@@ -22,14 +22,26 @@ class Position extends React.Component {
     let costBasis = shares * buy_price
     let currentValue = (this.state.currentValue) * shares
     return (
-      <div className='position'>
-        <p>Ticker: {ticker}</p>
-        <p>Shares: {shares}</p>
-        <p>Buy Price: ${buy_price}</p>
-        <p>Cost Basis: ${costBasis}</p>
-        <p>Current Value: ${currentValue}</p>
-        <p>Profit & Loss: {currentValue - costBasis}</p>
-      </div>
+      <table className="stock_table">
+        <tbody>
+          <tr className="stock_header">
+            <th className="stock_title stock_entry">Ticker:</th>
+            <th className="stock_title stock_entry">Shares:</th>
+            <th className="stock_title stock_entry">Buy Price:</th>
+            <th className="stock_title stock_entry">Cost Basis:</th>
+            <th className="stock_title stock_entry">Current Value:</th>
+            <th className="stock_title stock_entry">Profit & Loss:</th>
+          </tr>
+          <tr>
+            <th className="stock_entry">{ticker}</th>
+            <th className="stock_entry">{shares}</th>
+            <th className="stock_entry money">${buy_price.toFixed(2)}</th>
+            <th className="stock_entry money">${costBasis}</th>
+            <th className="stock_entry money">${currentValue}</th>
+            <th className="stock_entry profit-loss">{(currentValue - costBasis).toFixed(2)}</th>
+          </tr>
+        </tbody>
+      </table>
     )
   }
 }

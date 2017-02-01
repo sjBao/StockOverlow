@@ -13,14 +13,15 @@ class SearchBar extends React.Component {
 
   render() {
     return(
-      <div className="search-ticker-container">
-        <section id="searcher">
-          <form id="search-ticker-form" onSubmit={this.handleSubmit.bind(this)}>
-            <input type="text" ref="searchBar" name="ticker" placeholder="Search by Ticker" />
-            <input type="submit" value="Search" name="searchTicker" />
-          </form>
-        </section>
-      </div>
+          <div className="search-ticker-container">
+            <h2>Search a Stock</h2>
+            <section id="searcher">
+              <form id="search-ticker-form" onSubmit={this.handleSubmit.bind(this)}>
+                <input type="text" ref="searchBar" name="ticker" placeholder="Search by Ticker"/>
+                <input type="submit" value="Search" name="searchTicker" className="btn btn-default buy-button"/>
+              </form>
+            </section>
+          </div>
     )
   }
 }

@@ -18,29 +18,32 @@ class UserProfile extends React.Component {
   render() {
     return (
       <section className="user-profile">
-        <h1>{this.props.fullname}</h1>
-
-        <ul className="positions-list">
-          {
-            this.state.positions.map(position=>{
-              return (
-                <li key={position.id}>
-                  <Position data={position} update={this.updateProfitLoss}
-                   />
-                </li>
-              )
-            })
-          }
-        </ul>
-        <h2>Total Cost Basis:
-          <span>{this.props.totalCostBasis}</span>
-        </h2>
-        <h2>
-          <span>Total Current Value: {this.state.currentValue}</span>
-        </h2>
-        <h2>
-          <span>Total Profit Loss: {this.state.currentValue - this.props.totalCostBasis}</span>
-        </h2>
+        <h1 className="profile_name">{this.props.fullname}</h1>
+        <div className="row">
+          <div className="col-sm-12 col-md-12 position-table">
+            {
+              this.state.positions.map(position=>{
+                return (
+                  <div key={position.id}>
+                    <Position data={position} update={this.updateProfitLoss}
+                     />
+                  </div>
+                )
+              })
+            }
+          </div>
+        </div>
+        <section className="total-values">
+          <h3 className="totals">Total Cost Basis:
+            <span className="money"> ${this.props.totalCostBasis}</span>
+          </h3>
+          <h3 className="totals">Total Current Value:
+            <span className="money"> ${this.state.currentValue.toFixed(2)}</span>
+          </h3>
+          <h3 className="totals profit-loss">Total Profit Loss:
+            <span> {(this.state.currentValue - this.props.totalCostBasis).toFixed(2)}</span>
+          </h3>
+        </section>
       </section>
     )
   }

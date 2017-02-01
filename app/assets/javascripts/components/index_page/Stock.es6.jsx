@@ -46,14 +46,11 @@ class Stock extends React.Component {
         </ul>
 
         <form onSubmit={this.handleSubmit}>
-          <label> Number of Share to buy: </label>
+          <label className="buy-share"> Number of Share to buy: </label>
           <input ref="shareAmt" type="text"/>
           <input type="hidden" value={this.state.quote.Ask}/>
-          <input type="submit"/>
+          <input type="submit" className="btn btn-default buy-button"/>
         </form>
-
-        <p> Cost Basis:</p>
-
 
       </div>
 

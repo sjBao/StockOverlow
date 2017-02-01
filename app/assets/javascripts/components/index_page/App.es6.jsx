@@ -25,13 +25,13 @@ class App extends React.Component {
 
   render() {
     return(
-      <div className='row'>
-        <h1>Search a Stock</h1>
-        <SearchBar stockInfo={this.stockInfo} />
-        <DisplayStocks key={this.state.ticker} stockCollection={this.state.stockTickers}/>
-        <StockTable data={this.state.tableInfo} />
+      <div className="row">
+        <div className="col-sm-12 col-md-12">
+            <SearchBar stockInfo={this.stockInfo} />
+            <DisplayStocks key={this.state.ticker} stockCollection={this.state.stockTickers}/>
+            <StockTable data={this.state.tableInfo} />
+        </div>
       </div>
-
     )
   }
 }

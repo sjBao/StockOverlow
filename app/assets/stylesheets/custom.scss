@@ -21,8 +21,8 @@ label {
 
 #logo {
   font-variant: small-caps;
-  font-size: 4em;
-  margin: 15px;
+  font-size: 4.5em;
+  margin: 15px 0;
 }
 
 #logo a{
@@ -30,7 +30,7 @@ label {
 }
 
 .main-header {
-  height: 100px;
+  height: 125px;
 }
 
 .nav-bar {
@@ -44,7 +44,6 @@ label {
 .nav-bar li{
   padding: 12px 17px;
   display: inline;
-  // margin: 10px;
   background-color: #85bb65;
 }
 
@@ -66,10 +65,34 @@ label {
   background-color: #85bb65;
 }
 
+.position-list {
+  font-size: 1.7em;
+  margin: 25px;
+}
+
+.position-list li{
+  list-style-type: none;
+  padding: 10px;
+}
+
+.buy-share {
+  font-size: 1.7em;
+  font-variant: normal;
+  margin: 20px;
+}
+
 .submit_button {
   font-variant: small-caps;
   color: #85bb65;
   font-size: 1em;
+}
+
+.search-ticker-container {
+  margin: 50px 50px;
+}
+
+.buy-button {
+  margin: 0 5px;
 }
 
 .table-container {
@@ -80,6 +103,7 @@ label {
 
 .stock_table {
   font-size: 1.2em;
+  margin: 0 auto;
 }
 
 .stock_title {
@@ -91,4 +115,28 @@ label {
   // border-top: 1px solid black;
   text-align: center;
   padding: 15px 10px;
+}
+
+.profile_name {
+  margin: 10px 15px 50px 0;
+  font-size: 3.5em
+}
+
+.money {
+  color: #85bb65;
+}
+
+.total-values {
+  margin-top: 50px;
+}
+.totals {
+  font-size: 1.75em;
+  margin: 35px 0;
+  width: 400px;
+}
+
+.profit-loss {
+  background-color: #85bb65;
+  color: white;
+  padding: 12px 17px;
 }
