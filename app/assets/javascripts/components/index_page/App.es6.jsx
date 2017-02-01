@@ -24,10 +24,16 @@ class App extends React.Component {
 
 
   render() {
+    let searchBar
+    if(this.props.current_user) {
+      searchBar =  <SearchBar stockInfo={this.stockInfo} />
+    } else {
+      searchBar = <h1>Log in to query and buy most up to date stock info!</h1>
+    }
     return(
       <div className="row">
         <div className="col-sm-12 col-md-12">
-            <SearchBar stockInfo={this.stockInfo} />
+            {searchBar}
             <DisplayStocks key={this.state.ticker} stockCollection={this.state.stockTickers} userId={this.props.current_user}/>
             <StockTable data={this.state.tableInfo} />
         </div>
