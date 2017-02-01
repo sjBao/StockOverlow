@@ -22,11 +22,10 @@ class PositionsController < ApplicationController
       shares: params[:shares] , buy_price: params[:buy_price], ticker: params[:ticker]
       )
     current_user.portfolio.positions << @position
-
     if @position.save
       redirect_to current_user
     else
-      
+
     end
 
   end

@@ -28,7 +28,8 @@ class Stock extends React.Component {
       }
     })
      .done(response=>{
-       console.log($(event.target).serialize())
+       console.log(this.props.userId)
+       location.href = "/users/"+ this.props.userId
      }.bind(this))
 
   }

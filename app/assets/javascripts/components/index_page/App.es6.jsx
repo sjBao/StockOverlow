@@ -28,7 +28,7 @@ class App extends React.Component {
       <div className="row">
         <div className="col-sm-12 col-md-12">
             <SearchBar stockInfo={this.stockInfo} />
-            <DisplayStocks key={this.state.ticker} stockCollection={this.state.stockTickers}/>
+            <DisplayStocks key={this.state.ticker} stockCollection={this.state.stockTickers} userId={this.props.current_user}/>
             <StockTable data={this.state.tableInfo} />
         </div>
       </div>

@@ -5,7 +5,7 @@ class DisplayStocks extends React.Component {
         {
           // console.log("stockCollection man", this.props.stockCollection)
           this.props.stockCollection.map((ticker) => {
-            return <Stock ticker={ticker.quote.symbol} quote={ticker.quote} stockUrl={"/positions/"+ticker.quote.symbol}/>
+            return <Stock ticker={ticker.quote.symbol} quote={ticker.quote} stockUrl={"/positions/"+ticker.quote.symbol} userId={this.props.userId}/>
           })
         }
       </div>
