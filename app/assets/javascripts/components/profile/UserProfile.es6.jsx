@@ -35,7 +35,7 @@ class UserProfile extends React.Component {
         </div>
         <section className="total-values">
           <h3 className="totals">Total Cost Basis:
-            <span className="money"> ${this.props.totalCostBasis}</span>
+            <span className="money"> ${(this.props.totalCostBasis).toFixed(2)}</span>
           </h3>
           <h3 className="totals">Total Current Value:
             <span className="money"> ${this.state.currentValue.toFixed(2)}</span>

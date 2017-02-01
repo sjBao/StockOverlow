@@ -19,8 +19,8 @@ class Position extends React.Component {
 
   render(){
     let { shares, buy_price, ticker } = this.props.data
-    let costBasis = shares * buy_price
-    let currentValue = (this.state.currentValue) * shares
+    let costBasis = (shares * buy_price).toFixed(2)
+    let currentValue = ((this.state.currentValue) * shares).toFixed(2)
     return (
       <table className="stock_table">
         <tbody>

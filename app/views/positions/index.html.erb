@@ -1,4 +1,6 @@
-<% props = { current_user: current_user.id } %>
+<% if current_user %>
+  <% props = { current_user: current_user.id } %>
+<% end %>
 <%= react_component 'App', props %>
 <!-- <div class="row">
   <div class="col-sm-12 col-md-12 table-container">
