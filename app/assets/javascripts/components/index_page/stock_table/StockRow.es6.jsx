@@ -1,15 +1,15 @@
 class StockRow extends React.Component {
   render(){
-    let { name, symbol, ebitda, high, low, ask, bid } = this.props.data
+    let { Name, symbol, EBITDA, DaysHigh, DaysLow, Ask, Bid } = this.props.data
     return (
       <tr>
-        <th className="stock_entry">{name}</th>
+        <th className="stock_entry">{Name}</th>
         <th className="stock_entry">{symbol}</th>
-        <th className="stock_entry">{ebitda}</th>
-        <th className="stock_entry">{high}</th>
-        <th className="stock_entry">{low}</th>
-        <th className="stock_entry">{ask}</th>
-        <th className="stock_entry">{bid}</th>
+        <th className="stock_entry">{EBITDA}</th>
+        <th className="stock_entry">{DaysHigh}</th>
+        <th className="stock_entry">{DaysLow}</th>
+        <th className="stock_entry">{Ask}</th>
+        <th className="stock_entry">{Bid}</th>
       </tr>
     )
   }

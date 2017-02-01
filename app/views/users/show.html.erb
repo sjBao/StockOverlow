@@ -1,1 +1,4 @@
-<%= react_component 'UserProfile' %>
+<% props = { fullname: current_user.full_name, positions: current_user.positions, totalCostBasis: current_user.portfolio.total_cost_basis, totalCurrentValue: 0 } %>
+<%= react_component 'UserProfile', props %>
+<!-- ruby passes static values as props
+react will ajax dynamic values -->

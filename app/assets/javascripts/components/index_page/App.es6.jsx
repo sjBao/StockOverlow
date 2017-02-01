@@ -24,7 +24,6 @@ class App extends React.Component {
 
 
   render() {
-    console.log(this.state.tableInfo)
     return(
       <div className='row'>
         <h1>Search a Stock</h1>

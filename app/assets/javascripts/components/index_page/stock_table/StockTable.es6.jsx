@@ -1,13 +1,6 @@
 class StockTable extends React.Component {
-  constructor() {
-    super()
-    this.state = { fivePositionsData: [
-      {name: 'Google', symbol: 'GOOG', ebitda: 1232, high: 10, low: 1, ask: 4, bid: 3},
-      {name: 'Google', symbol: 'GOOG', ebitda: 1232, high: 10, low: 1, ask: 4, bid: 3},
-      {name: 'Google', symbol: 'GOOG', ebitda: 1232, high: 10, low: 1, ask: 4, bid: 3},
-      {name: 'Google', symbol: 'GOOG', ebitda: 1232, high: 10, low: 1, ask: 4, bid: 3},
-      {name: 'Google', symbol: 'GOOG', ebitda: 1232, high: 10, low: 1, ask: 4, bid: 3}
-    ] }
+  constructor(props) {
+    super(props)
   }
 
   render(){
@@ -26,7 +19,7 @@ class StockTable extends React.Component {
               <th className="stock_title stock_entry">Bidding Price:</th>
             </tr>
             {
-              this.state.fivePositionsData.map((stockRow, i)=>{
+              this.props.data.map((stockRow, i)=>{
                 return <StockRow className="stock_entry" key={i} data={stockRow}/>
               })
             }
