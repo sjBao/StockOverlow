@@ -7,15 +7,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(users_params)
-    if @user.save
-      @user.portfolio = Portfolio.create
-      log_in(@user)
-      redirect_to @user
-    else
-      @errors = @user.errors.full_messages
-      render :new
-    end
   end
 
   def show
