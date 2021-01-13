@@ -1,5 +1,7 @@
-module SessionsHelper
+# frozen_string_literal: true
 
+# Module for sessions
+module SessionsHelper
   def login(user)
     session[:user_id] = user.id
   end
@@ -9,7 +11,7 @@ module SessionsHelper
   end
 
   def logged_in?
-    !current_user.nil?
+    !!current_user
   end
 
   def current_user?(user)
@@ -20,5 +22,4 @@ module SessionsHelper
     session.delete(:user_id)
     @current_user = nil
   end
-
 end

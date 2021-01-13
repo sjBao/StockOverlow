@@ -1,4 +1,20 @@
-<% props = { fullname: current_user.full_name, positions: current_user.positions, totalCostBasis: current_user.portfolio.total_cost_basis, totalCurrentValue: 0 } %>
-<%= react_component 'UserProfile', props %>
-<!-- ruby passes static values as props
-react will ajax dynamic values -->
+<section class="user-profile">
+  <div>Portfolio</div>
+  <div class="portfolio-balance">
+    <p>Portfolio balance</p>
+    <p>$200,000.00</p>
+  </div>
+
+  <div class="assets-list-section">
+    <div class="section-header">
+      Your Assets
+    </div>
+    <div class="assets-list">
+      <div class="asset-item">
+        <div class="ticker">AMZN</div>
+        <div class="balance">$0.29</div>
+        <div class="allocation">0%</div>
+      </div>
+    </div>
+  </div>
+</section>
